@@ -11,8 +11,9 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pip install -r requirements.txt
+          pip install --upgrade setuptools
           pip install -U scikit-learn
+          pip install -U matplotlib
           
           python train.py
 
